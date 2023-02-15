@@ -66,5 +66,10 @@ namespace OnyouOtomasyon
             satis.MdiParent = this;
             satis.Show();
         }
+
+        private void ribbonControl1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
