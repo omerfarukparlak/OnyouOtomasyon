@@ -71,5 +71,19 @@ namespace OnyouOtomasyon
         {
 
         }
+        frmAnaSayfa anasayfa;
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            anasayfa = new frmAnaSayfa();
+            anasayfa.MdiParent = this;
+            anasayfa.Show();
+        }
+
+        private void frmAna_Load(object sender, System.EventArgs e)
+        {
+            anasayfa = new frmAnaSayfa();
+            anasayfa.MdiParent = this;
+            anasayfa.Show();
+        }
     }
 }
