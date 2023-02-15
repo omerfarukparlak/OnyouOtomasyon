@@ -74,18 +74,19 @@ namespace OnyouOtomasyon
             try
             {
                 cmd.Connection = bag.baglanti();
-                var sorgu = "Insert into satislar(firmaAd,urun,fiyat,teslimAlan,teslimEden,tarih,satisNo,kullanilanMalzeme,malzemefiyat) " +
-                            "values(@ad,@urun,@fiyat,@teslimalan,@teslimeden,@tarih,@satisno,@kullmalz,@malzfiyat)";
+                var sorgu = "Insert into satislar(firmaAd,urun,fiyat,teslimAlan,teslimEden,tarih,satisNo,kullanilanMalzeme,malzemefiyat,adet) " +
+                            "values(@ad,@urun,@fiyat,@teslimalan,@teslimeden,@tarih,@satisno,@kullmalz,@malzfiyat,@adet)";
                 cmd.CommandText = sorgu;
                 cmd.Parameters.AddWithValue("@ad", txtFirmaAd.Text);
                 cmd.Parameters.AddWithValue("@urun", txtUrun.Text);
-                cmd.Parameters.AddWithValue("@fiyat", txtTutar.Text);
+                cmd.Parameters.AddWithValue("@fiyat", Convert.ToDecimal(txtTutar.Text));
                 cmd.Parameters.AddWithValue("@teslimalan", txtTeslimAlan.Text);
                 cmd.Parameters.AddWithValue("@teslimeden", txtTeslimEden.Text);
-                cmd.Parameters.AddWithValue("@tarih", dateTarih.Text);
-                cmd.Parameters.AddWithValue("@satisno", txtSatisNo.Text);
-                cmd.Parameters.AddWithValue("@kullmalz", txtKullMalz.Text);
-                cmd.Parameters.AddWithValue("@malzfiyat", txtMalzFiyat.Text);
+                cmd.Parameters.AddWithValue("@tarih", dateTarih.Text.ToString());
+                cmd.Parameters.AddWithValue("@satisno", txtSatisNo.Text.ToString());
+                cmd.Parameters.AddWithValue("@kullmalz", txtKullMalz.Text.ToString());
+                cmd.Parameters.AddWithValue("@malzfiyat", Convert.ToDecimal(txtMalzFiyat.Text));
+                cmd.Parameters.AddWithValue("@adet", numericUpDown1.Value.ToString());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("İşlem tamamlandı.", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Listele();

@@ -56,6 +56,8 @@ namespace OnyouOtomasyon
             this.dateTarih = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -71,6 +73,7 @@ namespace OnyouOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.dateTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -86,6 +89,8 @@ namespace OnyouOtomasyon
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.numericUpDown1);
+            this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.simpleButton1);
             this.xtraTabPage1.Controls.Add(this.txtSatisNo);
             this.xtraTabPage1.Controls.Add(this.labelControl12);
@@ -146,7 +151,7 @@ namespace OnyouOtomasyon
             // 
             // txtMalzFiyat
             // 
-            this.txtMalzFiyat.Location = new System.Drawing.Point(191, 249);
+            this.txtMalzFiyat.Location = new System.Drawing.Point(191, 276);
             this.txtMalzFiyat.Name = "txtMalzFiyat";
             this.txtMalzFiyat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMalzFiyat.Properties.Appearance.Options.UseFont = true;
@@ -160,7 +165,7 @@ namespace OnyouOtomasyon
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl11.Location = new System.Drawing.Point(69, 248);
+            this.labelControl11.Location = new System.Drawing.Point(69, 275);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(116, 23);
             this.labelControl11.TabIndex = 32;
@@ -168,7 +173,7 @@ namespace OnyouOtomasyon
             // 
             // txtKullMalz
             // 
-            this.txtKullMalz.Location = new System.Drawing.Point(191, 209);
+            this.txtKullMalz.Location = new System.Drawing.Point(191, 239);
             this.txtKullMalz.Name = "txtKullMalz";
             this.txtKullMalz.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullMalz.Properties.Appearance.Options.UseFont = true;
@@ -180,7 +185,7 @@ namespace OnyouOtomasyon
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl10.Location = new System.Drawing.Point(27, 208);
+            this.labelControl10.Location = new System.Drawing.Point(27, 238);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(158, 23);
             this.labelControl10.TabIndex = 30;
@@ -201,7 +206,7 @@ namespace OnyouOtomasyon
             // 
             // txtTeslimEden
             // 
-            this.txtTeslimEden.Location = new System.Drawing.Point(164, 371);
+            this.txtTeslimEden.Location = new System.Drawing.Point(164, 398);
             this.txtTeslimEden.Name = "txtTeslimEden";
             this.txtTeslimEden.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeslimEden.Properties.Appearance.Options.UseFont = true;
@@ -213,7 +218,7 @@ namespace OnyouOtomasyon
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl6.Location = new System.Drawing.Point(39, 370);
+            this.labelControl6.Location = new System.Drawing.Point(39, 397);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(123, 23);
             this.labelControl6.TabIndex = 24;
@@ -224,7 +229,7 @@ namespace OnyouOtomasyon
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl8.Location = new System.Drawing.Point(105, 408);
+            this.labelControl8.Location = new System.Drawing.Point(105, 435);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(56, 23);
             this.labelControl8.TabIndex = 22;
@@ -247,7 +252,7 @@ namespace OnyouOtomasyon
             this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOK.Appearance.Options.UseFont = true;
             this.btnOK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.ImageOptions.Image")));
-            this.btnOK.Location = new System.Drawing.Point(291, 443);
+            this.btnOK.Location = new System.Drawing.Point(291, 470);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(140, 38);
             this.btnOK.TabIndex = 20;
@@ -256,7 +261,7 @@ namespace OnyouOtomasyon
             // 
             // txtTeslimAlan
             // 
-            this.txtTeslimAlan.Location = new System.Drawing.Point(164, 328);
+            this.txtTeslimAlan.Location = new System.Drawing.Point(164, 355);
             this.txtTeslimAlan.Name = "txtTeslimAlan";
             this.txtTeslimAlan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeslimAlan.Properties.Appearance.Options.UseFont = true;
@@ -268,7 +273,7 @@ namespace OnyouOtomasyon
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl5.Location = new System.Drawing.Point(44, 327);
+            this.labelControl5.Location = new System.Drawing.Point(44, 354);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(118, 23);
             this.labelControl5.TabIndex = 16;
@@ -276,7 +281,7 @@ namespace OnyouOtomasyon
             // 
             // txtTutar
             // 
-            this.txtTutar.Location = new System.Drawing.Point(164, 285);
+            this.txtTutar.Location = new System.Drawing.Point(164, 312);
             this.txtTutar.Name = "txtTutar";
             this.txtTutar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTutar.Properties.Appearance.Options.UseFont = true;
@@ -290,7 +295,7 @@ namespace OnyouOtomasyon
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl4.Location = new System.Drawing.Point(27, 284);
+            this.labelControl4.Location = new System.Drawing.Point(27, 311);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(135, 23);
             this.labelControl4.TabIndex = 14;
@@ -339,7 +344,7 @@ namespace OnyouOtomasyon
             // dateTarih
             // 
             this.dateTarih.EditValue = null;
-            this.dateTarih.Location = new System.Drawing.Point(164, 409);
+            this.dateTarih.Location = new System.Drawing.Point(164, 436);
             this.dateTarih.Name = "dateTarih";
             this.dateTarih.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTarih.Properties.Appearance.Options.UseFont = true;
@@ -373,6 +378,25 @@ namespace OnyouOtomasyon
             this.gridView1.Name = "gridView1";
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.labelControl2.Location = new System.Drawing.Point(110, 203);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(51, 23);
+            this.labelControl2.TabIndex = 38;
+            this.labelControl2.Text = "Adet:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.numericUpDown1.Location = new System.Drawing.Point(167, 203);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(264, 26);
+            this.numericUpDown1.TabIndex = 39;
+            // 
             // frmSatislar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +423,7 @@ namespace OnyouOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.dateTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +456,7 @@ namespace OnyouOtomasyon
         private DevExpress.XtraEditors.TextEdit txtSatisNo;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
