@@ -108,5 +108,40 @@ namespace OnyouOtomasyon
             GridUrunler();
             GridPersoneller();
         }
+        
+        private void gridView2_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow dr = gridView2.GetDataRow(gridView2.FocusedRowHandle);
+            frmMakineBilgi makineBilgi = new frmMakineBilgi();
+            makineBilgi.makineMarka = dr["makineMarka"].ToString();
+            makineBilgi.makineModel = dr["makineModel"].ToString();
+            makineBilgi.makineTur = dr["makineTur"].ToString();
+            makineBilgi.makineDurum = dr["makineDurum"].ToString();
+            makineBilgi.Show();
+        }
+        private void gridView6_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow dr = gridView6.GetDataRow(gridView6.FocusedRowHandle);
+            frmUrunBilgi urunBilgi = new frmUrunBilgi();
+            urunBilgi.urunMarka = dr["urunMarka"].ToString();
+            urunBilgi.urunModel = dr["urunModel"].ToString();
+            urunBilgi.urunTur = dr["urunTur"].ToString();
+            urunBilgi.urunNo = dr["urunNo"].ToString();
+            urunBilgi.urunFiyat = dr["fiyat"].ToString();
+            urunBilgi.Show();
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            frmPersonelBilgi personelBilgi = new frmPersonelBilgi();
+            personelBilgi.personelAd = dr["personelAd"].ToString();
+            personelBilgi.personelSoyad = dr["personelSoyad"].ToString();
+            personelBilgi.personelMevkii = dr["personelMevkii"].ToString();
+            personelBilgi.personelTel1 = dr["personelTel1"].ToString();
+            personelBilgi.personelTel2 = dr["personelTel2"].ToString();
+            personelBilgi.personelAdres = dr["personelAdres"].ToString();
+            personelBilgi.Show();
+        }
     }
 }

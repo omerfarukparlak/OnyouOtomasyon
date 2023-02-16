@@ -77,5 +77,33 @@ namespace OnyouOtomasyon
             rchAdres.Text = dr["firmaAdres"].ToString();
             txtYetkili.Text = dr["yetkiliAdSoyad"].ToString();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cmd.Connection = bag.baglanti();
+                var sorgu = "update firmalar set firmaAd=@ad,firmaMail=@mail,yetkiliTel1=@tel1,yetkiliTel2=@tel2,firmaVergiNo=@vergi,firmaAdres=@adres,yetkiliAdSoyad=@adsoyad where firmaId=@id"; ;
+                cmd.CommandText = sorgu;
+                cmd.Parameters.AddWithValue("@ad", txtFirmaAd.Text);
+                cmd.Parameters.AddWithValue("@mail", txtMail.Text);
+                cmd.Parameters.AddWithValue("@tel1", txtTel1.Text);
+                cmd.Parameters.AddWithValue("@tel2", txtTel2.Text);
+                cmd.Parameters.AddWithValue("@vergi", txtVergiNo.Text);
+                cmd.Parameters.AddWithValue("@adres", rchAdres.Text);
+                cmd.Parameters.AddWithValue("@adsoyad", txtYetkili.Text);
+                cmd.Parameters.AddWithValue("@id", txtID.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("İşlem başarıyla tamamlandı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listele();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Lütfen bilgileri kontrol ederek tekrar deneyiniz.","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                throw;
+            }
+            
+
+        }
     }
 }

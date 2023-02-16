@@ -102,6 +102,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMakineBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMakineBilgi.Designer.cs">
+      <DependentUpon>frmMakineBilgi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMakineler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     <Compile Include="frmMalzemeler.Designer.cs">
       <DependentUpon>frmMalzemeler.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPersonelBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelBilgi.Designer.cs">
+      <DependentUpon>frmPersonelBilgi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersoneller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="frmSatislar.Designer.cs">
       <DependentUpon>frmSatislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunBilgi.Designer.cs">
+      <DependentUpon>frmUrunBilgi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUrunler.cs">
       <SubType>Form</SubType>
@@ -165,17 +183,26 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMakineBilgi.resx">
+      <DependentUpon>frmMakineBilgi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMakineler.resx">
       <DependentUpon>frmMakineler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMalzemeler.resx">
       <DependentUpon>frmMalzemeler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelBilgi.resx">
+      <DependentUpon>frmPersonelBilgi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersoneller.resx">
       <DependentUpon>frmPersoneller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSatislar.resx">
       <DependentUpon>frmSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunBilgi.resx">
+      <DependentUpon>frmUrunBilgi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUrunler.resx">
       <DependentUpon>frmUrunler.cs</DependentUpon>
