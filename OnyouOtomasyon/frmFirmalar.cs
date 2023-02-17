@@ -82,6 +82,7 @@ namespace OnyouOtomasyon
         {
             try
             {
+                DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
                 cmd.Connection = bag.baglanti();
                 var sorgu = "update firmalar set firmaAd=@ad,firmaMail=@mail,yetkiliTel1=@tel1,yetkiliTel2=@tel2,firmaVergiNo=@vergi,firmaAdres=@adres,yetkiliAdSoyad=@adsoyad where firmaId=@id"; ;
                 cmd.CommandText = sorgu;
@@ -92,7 +93,7 @@ namespace OnyouOtomasyon
                 cmd.Parameters.AddWithValue("@vergi", txtVergiNo.Text);
                 cmd.Parameters.AddWithValue("@adres", rchAdres.Text);
                 cmd.Parameters.AddWithValue("@adsoyad", txtYetkili.Text);
-                cmd.Parameters.AddWithValue("@id", txtID.Text);
+                cmd.Parameters.AddWithValue("@id", dr["firmaId"].ToString());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("İşlem başarıyla tamamlandı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Listele();

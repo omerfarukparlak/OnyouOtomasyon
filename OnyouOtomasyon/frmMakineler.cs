@@ -89,5 +89,29 @@ namespace OnyouOtomasyon
             cmbDurum.Text = dr["makineDurum"].ToString();
             cmbTur.Text = dr["makineTur"].ToString();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                cmd.Connection = bag.baglanti();
+                var sorgu = "update makineler set makineMarka=@marka,makineModel=@model,makineDurum=@durum,makineTur=@tur where makineId=@id";
+                cmd.CommandText = sorgu;
+                cmd.Parameters.AddWithValue("@marka", txtMarka.Text);
+                cmd.Parameters.AddWithValue("@model", txtModel.Text);
+                cmd.Parameters.AddWithValue("@durum", cmbDurum.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@tur", cmbTur.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@id", dr["makineId"].ToString());
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Makine başarıyla güncellendi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listele();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu. Bilgileri kontrol ederek tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                throw;
+            }
+        }
     }
 }

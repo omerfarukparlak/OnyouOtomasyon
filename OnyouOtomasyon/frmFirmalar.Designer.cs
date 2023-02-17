@@ -32,6 +32,7 @@ namespace OnyouOtomasyon
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFirmalar));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.rchAdres = new System.Windows.Forms.RichTextBox();
             this.txtVergiNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -50,9 +51,6 @@ namespace OnyouOtomasyon
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtID = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -64,7 +62,6 @@ namespace OnyouOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.txtFirmaAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -80,8 +77,6 @@ namespace OnyouOtomasyon
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.txtID);
-            this.xtraTabPage1.Controls.Add(this.labelControl9);
             this.xtraTabPage1.Controls.Add(this.simpleButton1);
             this.xtraTabPage1.Controls.Add(this.rchAdres);
             this.xtraTabPage1.Controls.Add(this.txtVergiNo);
@@ -104,9 +99,21 @@ namespace OnyouOtomasyon
             this.xtraTabPage1.Size = new System.Drawing.Size(454, 544);
             this.xtraTabPage1.Text = "İşlemler";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(69, 466);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(140, 38);
+            this.simpleButton1.TabIndex = 27;
+            this.simpleButton1.Text = "Güncelle";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // rchAdres
             // 
-            this.rchAdres.Location = new System.Drawing.Point(176, 350);
+            this.rchAdres.Location = new System.Drawing.Point(171, 321);
             this.rchAdres.Name = "rchAdres";
             this.rchAdres.Size = new System.Drawing.Size(267, 134);
             this.rchAdres.TabIndex = 26;
@@ -114,7 +121,7 @@ namespace OnyouOtomasyon
             // 
             // txtVergiNo
             // 
-            this.txtVergiNo.Location = new System.Drawing.Point(176, 313);
+            this.txtVergiNo.Location = new System.Drawing.Point(171, 284);
             this.txtVergiNo.Name = "txtVergiNo";
             this.txtVergiNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtVergiNo.Properties.Appearance.Options.UseFont = true;
@@ -126,7 +133,7 @@ namespace OnyouOtomasyon
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl6.Location = new System.Drawing.Point(16, 312);
+            this.labelControl6.Location = new System.Drawing.Point(11, 283);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(154, 23);
             this.labelControl6.TabIndex = 24;
@@ -137,7 +144,7 @@ namespace OnyouOtomasyon
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl8.Location = new System.Drawing.Point(109, 350);
+            this.labelControl8.Location = new System.Drawing.Point(104, 321);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(61, 23);
             this.labelControl8.TabIndex = 22;
@@ -149,7 +156,7 @@ namespace OnyouOtomasyon
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.labelControl7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl7.ImageOptions.Image")));
-            this.labelControl7.Location = new System.Drawing.Point(159, 14);
+            this.labelControl7.Location = new System.Drawing.Point(159, 23);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(171, 36);
             this.labelControl7.TabIndex = 21;
@@ -160,7 +167,7 @@ namespace OnyouOtomasyon
             this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOK.Appearance.Options.UseFont = true;
             this.btnOK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.ImageOptions.Image")));
-            this.btnOK.Location = new System.Drawing.Point(303, 495);
+            this.btnOK.Location = new System.Drawing.Point(298, 466);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(140, 38);
             this.btnOK.TabIndex = 20;
@@ -169,7 +176,7 @@ namespace OnyouOtomasyon
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(176, 270);
+            this.txtMail.Location = new System.Drawing.Point(171, 241);
             this.txtMail.Name = "txtMail";
             this.txtMail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMail.Properties.Appearance.Options.UseFont = true;
@@ -181,7 +188,7 @@ namespace OnyouOtomasyon
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl5.Location = new System.Drawing.Point(63, 269);
+            this.labelControl5.Location = new System.Drawing.Point(58, 240);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(107, 23);
             this.labelControl5.TabIndex = 16;
@@ -189,7 +196,7 @@ namespace OnyouOtomasyon
             // 
             // txtTel2
             // 
-            this.txtTel2.Location = new System.Drawing.Point(176, 227);
+            this.txtTel2.Location = new System.Drawing.Point(171, 198);
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTel2.Properties.Appearance.Options.UseFont = true;
@@ -201,7 +208,7 @@ namespace OnyouOtomasyon
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl4.Location = new System.Drawing.Point(74, 226);
+            this.labelControl4.Location = new System.Drawing.Point(69, 197);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(96, 23);
             this.labelControl4.TabIndex = 14;
@@ -212,7 +219,7 @@ namespace OnyouOtomasyon
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl3.Location = new System.Drawing.Point(102, 140);
+            this.labelControl3.Location = new System.Drawing.Point(97, 111);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(68, 23);
             this.labelControl3.TabIndex = 13;
@@ -220,7 +227,7 @@ namespace OnyouOtomasyon
             // 
             // txtYetkili
             // 
-            this.txtYetkili.Location = new System.Drawing.Point(176, 141);
+            this.txtYetkili.Location = new System.Drawing.Point(171, 112);
             this.txtYetkili.Name = "txtYetkili";
             this.txtYetkili.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtYetkili.Properties.Appearance.Options.UseFont = true;
@@ -229,7 +236,7 @@ namespace OnyouOtomasyon
             // 
             // txtTel1
             // 
-            this.txtTel1.Location = new System.Drawing.Point(176, 181);
+            this.txtTel1.Location = new System.Drawing.Point(171, 152);
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTel1.Properties.Appearance.Options.UseFont = true;
@@ -241,7 +248,7 @@ namespace OnyouOtomasyon
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl2.Location = new System.Drawing.Point(74, 184);
+            this.labelControl2.Location = new System.Drawing.Point(69, 155);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(96, 23);
             this.labelControl2.TabIndex = 9;
@@ -249,7 +256,7 @@ namespace OnyouOtomasyon
             // 
             // txtFirmaAd
             // 
-            this.txtFirmaAd.Location = new System.Drawing.Point(176, 101);
+            this.txtFirmaAd.Location = new System.Drawing.Point(171, 72);
             this.txtFirmaAd.Name = "txtFirmaAd";
             this.txtFirmaAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFirmaAd.Properties.Appearance.Options.UseFont = true;
@@ -261,7 +268,7 @@ namespace OnyouOtomasyon
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl1.Location = new System.Drawing.Point(72, 104);
+            this.labelControl1.Location = new System.Drawing.Point(67, 75);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(98, 23);
             this.labelControl1.TabIndex = 7;
@@ -283,38 +290,6 @@ namespace OnyouOtomasyon
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(74, 495);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(140, 38);
-            this.simpleButton1.TabIndex = 27;
-            this.simpleButton1.Text = "Güncelle";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(176, 62);
-            this.txtID.Name = "txtID";
-            this.txtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtID.Properties.Appearance.Options.UseFont = true;
-            this.txtID.Size = new System.Drawing.Size(267, 24);
-            this.txtID.TabIndex = 29;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl9.Location = new System.Drawing.Point(142, 65);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(30, 23);
-            this.labelControl9.TabIndex = 28;
-            this.labelControl9.Text = "ID:";
             // 
             // frmFirmalar
             // 
@@ -338,7 +313,6 @@ namespace OnyouOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.txtFirmaAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,7 +340,5 @@ namespace OnyouOtomasyon
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.RichTextBox rchAdres;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit txtID;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }

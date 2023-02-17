@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Windows.Forms;
 namespace OnyouOtomasyon
 {
@@ -36,6 +37,12 @@ namespace OnyouOtomasyon
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://onyousport.com/");
+            Process.Start(sInfo);
         }
     }
 }
