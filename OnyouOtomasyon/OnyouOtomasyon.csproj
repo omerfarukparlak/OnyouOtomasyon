@@ -158,6 +158,12 @@
     <Compile Include="onyouSplash.Designer.cs">
       <DependentUpon>onyouSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="sonSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sonSatislar.Designer.cs">
+      <DependentUpon>sonSatislar.cs</DependentUpon>
+    </Compile>
     <Compile Include="sqlBaglanti.cs" />
     <Compile Include="frmAnaSayfa.cs">
       <SubType>Form</SubType>
@@ -220,6 +226,9 @@
     </Compile>
     <EmbeddedResource Include="onyouSplash.resx">
       <DependentUpon>onyouSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sonSatislar.resx">
+      <DependentUpon>sonSatislar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

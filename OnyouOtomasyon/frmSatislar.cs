@@ -12,6 +12,15 @@ namespace OnyouOtomasyon
         }
         sqlBaglanti bag = new sqlBaglanti();
         SqlCommand cmd = new SqlCommand();
+        public string firmaAd;
+        public string urun;
+        public string fiyat;
+        public string teslimalan;
+        public string teslimeden;
+        public string tarih;
+        public string satisno;
+        public string kullanilanmalzeme;
+        public string malzemefiyat;
         void Listele()
         {
             SqlDataAdapter adtr = new SqlDataAdapter("Select * from satislar", bag.baglanti());
@@ -41,7 +50,15 @@ namespace OnyouOtomasyon
         private void frmSatislar_Load(object sender, EventArgs e)
         {
             Listele();
-
+            firmaAd = txtFirmaAd.Text;
+            urun = txtUrun.Text;
+            fiyat = txtTutar.Text.ToString();
+            teslimalan = txtTeslimAlan.Text;
+            teslimeden = txtTeslimEden.Text;
+            tarih = dateTarih.ToString();
+            satisno = txtSatisNo.Text;
+            kullanilanmalzeme = txtKullMalz.Text;
+            malzemefiyat = txtMalzFiyat.Text;
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
