@@ -47,12 +47,16 @@ namespace OnyouOtomasyon
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.kullaniciYonet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -66,13 +70,16 @@ namespace OnyouOtomasyon
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10});
+            this.barButtonItem10,
+            this.kullaniciYonet});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1474, 158);
+            this.ribbonControl1.Size = new System.Drawing.Size(1720, 193);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
@@ -87,7 +94,10 @@ namespace OnyouOtomasyon
             // 
             // barButtonItem2
             // 
+            this.barButtonItem2.ActAsDropDown = true;
+            this.barButtonItem2.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.barButtonItem2.Caption = "Kullanıcılar";
+            this.barButtonItem2.DropDownControl = this.popupMenu1;
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
@@ -188,10 +198,11 @@ namespace OnyouOtomasyon
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 602);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 740);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1474, 24);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1720, 30);
             // 
             // ribbonPage2
             // 
@@ -202,14 +213,29 @@ namespace OnyouOtomasyon
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.kullaniciYonet);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // kullaniciYonet
+            // 
+            this.kullaniciYonet.Caption = "Kullanıcıları Yönet...";
+            this.kullaniciYonet.Id = 12;
+            this.kullaniciYonet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("kullaniciYonet.ImageOptions.Image")));
+            this.kullaniciYonet.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("kullaniciYonet.ImageOptions.LargeImage")));
+            this.kullaniciYonet.Name = "kullaniciYonet";
+            // 
             // frmAna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1474, 626);
+            this.ClientSize = new System.Drawing.Size(1720, 770);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAna";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
@@ -219,6 +245,7 @@ namespace OnyouOtomasyon
             this.Load += new System.EventHandler(this.frmAna_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +269,7 @@ namespace OnyouOtomasyon
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem kullaniciYonet;
     }
 }

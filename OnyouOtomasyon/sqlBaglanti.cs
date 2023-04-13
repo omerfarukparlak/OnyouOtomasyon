@@ -5,7 +5,7 @@ namespace OnyouOtomasyon
     {
         public SqlConnection baglanti()
         {
-            SqlConnection bag = new SqlConnection("Data Source=DESKTOP-TPTCHJL\\SQLEXPRESS;Initial Catalog=D:\\VERITABANı\\ONYOUOTOMASYON.MDF;Integrated Security=True");
+            SqlConnection bag = new SqlConnection("Data Source=OMERPARLAK\\SQLEXPRESS01;Initial Catalog=D:\\VERITABANı\\ONYOUOTOMASYON.MDF;Integrated Security=True");
             bag.Open();
             return bag;
         }
