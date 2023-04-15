@@ -52,13 +52,17 @@
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -85,6 +89,18 @@
     <Compile Include="frmAna.Designer.cs">
       <DependentUpon>frmAna.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAttachMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttachMail.Designer.cs">
+      <DependentUpon>frmAttachMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeUsername.Designer.cs">
+      <DependentUpon>frmChangeUsername.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFirmalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +124,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMail.Designer.cs">
+      <DependentUpon>frmMail.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMakineBilgi.cs">
       <SubType>Form</SubType>
@@ -138,6 +160,12 @@
     </Compile>
     <Compile Include="frmPersoneller.Designer.cs">
       <DependentUpon>frmPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRehber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRehber.Designer.cs">
+      <DependentUpon>frmRehber.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSatislar.cs">
       <SubType>Form</SubType>
@@ -187,14 +215,26 @@
     <EmbeddedResource Include="frmAnaSayfa.resx">
       <DependentUpon>frmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAttachMail.resx">
+      <DependentUpon>frmAttachMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeUsername.resx">
+      <DependentUpon>frmChangeUsername.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFirmalar.resx">
       <DependentUpon>frmFirmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciYonet.resx">
+      <DependentUpon>frmKullaniciYonet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKullanıcılar.resx">
       <DependentUpon>frmKullanıcılar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMail.resx">
+      <DependentUpon>frmMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMakineBilgi.resx">
       <DependentUpon>frmMakineBilgi.cs</DependentUpon>
@@ -210,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersoneller.resx">
       <DependentUpon>frmPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRehber.resx">
+      <DependentUpon>frmRehber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSatislar.resx">
       <DependentUpon>frmSatislar.cs</DependentUpon>

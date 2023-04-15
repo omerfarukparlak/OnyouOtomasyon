@@ -85,5 +85,17 @@ namespace OnyouOtomasyon
             anasayfa.MdiParent = this;
             anasayfa.Show();
         }
+        frmKullaniciYonet userMan;
+        private void kullaniciYonet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            userMan = new frmKullaniciYonet();
+            userMan.ShowDialog();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmRehber rehber = new frmRehber();
+            rehber.ShowDialog();
+        }
     }
 }
